@@ -6,8 +6,8 @@
 # author: Wolftallemo
 # url: https://github.com/Wolftallemo/mg-remove-from-lists
 
-require 'cgi'
 require 'base64'
+require 'cgi'
 
 after_initialize do
   DiscourseEvent.on(:user_destroyed) do |user|
