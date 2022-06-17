@@ -1,0 +1,4 @@
+plugins:
+  mg_removal_use_eu:
+    client: false
+    default: false

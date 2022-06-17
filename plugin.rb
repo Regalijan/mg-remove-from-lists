@@ -21,7 +21,7 @@ after_initialize do
 
     emails.each do |email|
       lists.each do |list|
-        uri = URI("https://api.mailgun.net/v3/#{SiteSetting.notification_email.split("@")[1]}/#{list}/#{CGI.escape(email)}")
+        uri = URI("https://api#{SiteSetting.mg_removal_use_eu ? ".eu" : ""}.mailgun.net/v3/#{SiteSetting.notification_email.split("@")[1]}/#{list}/#{CGI.escape(email)}")
         req = Net::HTTP::Delete.new(uri)
 
         req.basic_auth("api", SiteSetting.mailgun_api_key)
