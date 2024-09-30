@@ -3,7 +3,7 @@
 # name: mg-remove-from-lists
 # about: Removes email address from mailgun suppression lists on user destroy
 # version: 0.1
-# author: Wolftallemo
+# authors: Regalijan
 # url: https://github.com/Wolftallemo/mg-remove-from-lists
 
 require 'base64'
